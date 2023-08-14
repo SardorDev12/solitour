@@ -18,10 +18,12 @@ function Header() {
       <div className="nav-center">
         <div className="nav-header">
           <div className="logo">
-            <img src={logo} className="nav-logo" alt="logo" />
-            <h2>
-              Soli<span>Tour</span>
-            </h2>
+            <a href="/">
+              <img src={logo} className="nav-logo" alt="logo" />
+              <h2>
+                Soli<span>Tour</span>
+              </h2>
+            </a>
           </div>
           <button
             onClick={handleToggleMenu}
@@ -32,14 +34,12 @@ function Header() {
             <i className="fas fa-bars"></i>
           </button>
         </div>
-        {/* <!-- left this comment on purpose --> */}
         <ul className="nav-links" id="nav-links">
           {pageLinks.map((link) => {
             return (
               <li key={link.id}>
                 <a href={link.href} className="nav-link">
-                  {" "}
-                  {link.text}{" "}
+                  {link.text}
                 </a>
               </li>
             );
